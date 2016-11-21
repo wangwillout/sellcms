@@ -1,0 +1,41 @@
+.ie8-shadow{
+	position: absolute;
+	left:0;
+	bottom:-7px;
+	width: 100%;
+	height: 7px;
+	background: url(../img/shadow.png) repeat-x;
+	color: red;
+}
+.z-slider .banner .unslider-arrow .arrow{
+	background:url(../img/ie8-banner.png) no-repeat;
+}
+.z-slider .banner .prev #al{
+	background-position: center -8px; 
+}
+.z-slider .banner .prev #al:hover{
+	background-position: center -96px; 
+}
+.z-slider .banner .prev #al:active{
+	background-position: center -178px; 
+}
+.z-slider .banner .next #ar{
+	background-position: center -258px;
+}
+.z-slider .banner .next #ar:hover{
+	background-position: center -340px;
+}
+.z-slider .banner .next #ar:active{
+	background-position: center -426px;
+}
+.inside:hover{
+	border: 1px solid #ff6c00;
+}
+.inside:hover .like-text h3{color: red;}
+
+
+
+
+
+
+

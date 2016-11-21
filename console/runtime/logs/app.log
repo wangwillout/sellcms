@@ -1,0 +1,1131 @@
+2016-05-03 15:08:27 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default value for 'update_time'' in F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php:784
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(784): PDOStatement->execute()
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160503_015754_trends.php(20): yii\db\Migration->createTable('{{%trends}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(562): m160503_015754_trends->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160503_015754_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(108): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default value for 'update_time'
+The SQL being executed was: CREATE TABLE `trends` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT "动态id",
+	PRIMARY KEY (`id`),
+	`title` varchar(32) NOT NULL DEFAULT "" COMMENT "主题",
+	`sort` int(11) NOT NULL DEFAULT "0" COMMENT "排序",
+	`abstract` varchar(150) NOT NULL DEFAULT "" COMMENT "摘要",
+	`status` tinyint(1) NOT NULL DEFAULT "1" COMMENT "状态：0不显示;1显示",
+	`menu_id` int(11) NOT NULL DEFAULT "0" COMMENT "菜单ID",
+	`img` varchar(255) NOT NULL DEFAULT "" COMMENT "图片",
+	`create_time` int(11) NOT NULL COMMENT "创建时间",
+	`update_time` int(11) NOT NULL DEFAULT "" COMMENT "修改时间"
+) ENGINE=InnoDB DEFAULT CHARSET=utf8' in F:\zhongchuang\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `t...')
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160503_015754_trends.php(20): yii\db\Migration->createTable('{{%trends}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(562): m160503_015754_trends->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160503_015754_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(108): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1067
+    [2] => Invalid default value for 'update_time'
+)
+
+2016-05-03 15:08:25 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'KQTL59P5MYDQZI0'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'KQTL59P5MYDQZI0'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\KQTL59P5MYDQZI0'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW64'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\TortoiseSVN\\bin;D:\\Wamp\\wamp\\www\\yii\\framework;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\OpenVPN\\bin;G:\\phpStudy\\php55n;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;G:\\phpStudy\\MySQL\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\ProgramData\\ComposerSetup\\bin;D:\\;D:\\SSH;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => '������ OneNote 2010'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'F:/zhongchuang'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:/Program Files/Git/usr/bin/bash'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'KQTL59P5MYDQZI0'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\windows'
+    '_' => 'G:/phpStudy/php55n/php'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1462259305.3308
+    'REQUEST_TIME' => 1462259305
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-05-03 15:10:20 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default value for 'update_time'' in F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php:784
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(784): PDOStatement->execute()
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160503_015754_trends.php(20): yii\db\Migration->createTable('{{%trends}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(562): m160503_015754_trends->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160503_015754_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(108): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default value for 'update_time'
+The SQL being executed was: CREATE TABLE `trends` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT "动态id",
+	PRIMARY KEY (`id`),
+	`title` varchar(32) NOT NULL DEFAULT "" COMMENT "主题",
+	`sort` int(11) NOT NULL DEFAULT "0" COMMENT "排序",
+	`abstract` varchar(150) NOT NULL DEFAULT "" COMMENT "摘要",
+	`status` tinyint(1) NOT NULL DEFAULT "1" COMMENT "状态：0不显示;1显示",
+	`menu_id` int(11) NOT NULL DEFAULT "0" COMMENT "菜单ID",
+	`img` varchar(255) NOT NULL DEFAULT "" COMMENT "图片",
+	`create_time` int(11) NOT NULL COMMENT "创建时间",
+	`update_time` int(11) NULL DEFAULT "" COMMENT "修改时间"
+) ENGINE=InnoDB DEFAULT CHARSET=utf8' in F:\zhongchuang\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `t...')
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160503_015754_trends.php(20): yii\db\Migration->createTable('{{%trends}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(562): m160503_015754_trends->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160503_015754_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(108): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1067
+    [2] => Invalid default value for 'update_time'
+)
+
+2016-05-03 15:10:16 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'KQTL59P5MYDQZI0'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'KQTL59P5MYDQZI0'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\KQTL59P5MYDQZI0'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW64'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\TortoiseSVN\\bin;D:\\Wamp\\wamp\\www\\yii\\framework;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\OpenVPN\\bin;G:\\phpStudy\\php55n;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;G:\\phpStudy\\MySQL\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\ProgramData\\ComposerSetup\\bin;D:\\;D:\\SSH;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => '������ OneNote 2010'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'F:/zhongchuang'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:/Program Files/Git/usr/bin/bash'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'KQTL59P5MYDQZI0'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\windows'
+    '_' => 'G:/phpStudy/php55n/php'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1462259416.8102
+    'REQUEST_TIME' => 1462259416
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-05-17 03:32:07 [-][-][-][error][Error] Error: Class 'm160517_032332_product' not found in F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\MigrateController.php:170
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(508): yii\console\controllers\MigrateController->createMigration('m160517_032332_...')
+#1 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160517_032332_...')
+#2 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#3 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#10 F:\zhongchuang\yii(27): yii\base\Application->run()
+#11 {main}
+2016-05-17 03:31:53 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files (x86)\\Common Files'
+    'COMPUTERNAME' => 'KQTL59P5MYDQZI0'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'KQTL59P5MYDQZI0'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\KQTL59P5MYDQZI0'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW64'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\TortoiseSVN\\bin;D:\\Wamp\\wamp\\www\\yii\\framework;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\OpenVPN\\bin;G:\\phpStudy2016\\php70n;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;G:\\phpStudy2016\\MySQL\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\ProgramData\\ComposerSetup\\bin;D:\\;D:\\SSH;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => '������ OneNote 2010'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMFILES' => 'C:\\Program Files (x86)'
+    'PS1' => '\\[\\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'F:/zhongchuang'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:/Program Files/Git/usr/bin/bash'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'KQTL59P5MYDQZI0'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\windows'
+    '_' => 'G:/phpStudy2016/php70n/php'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1463455913.4763
+    'REQUEST_TIME' => 1463455913
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-05-17 03:39:02 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1101 BLOB/TEXT column 'content' can't have a default value in F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160517_032332_product.php(21): yii\db\Migration->createTable('{{%product}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160517_032332_product->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160517_032332_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1101 BLOB/TEXT column 'content' can't have a default value
+The SQL being executed was: CREATE TABLE `product` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT "产品id",
+	PRIMARY KEY (`id`),
+	`name` varchar(32) NOT NULL DEFAULT "" COMMENT "产品名称",
+	`content` text NOT NULL DEFAULT "" COMMENT "产品内容",
+	`img` varchar(255) NOT NULL DEFAULT "" COMMENT "图片",
+	`de_img` varchar(255) NOT NULL DEFAULT "" COMMENT "详情图片",
+	`sort` int(11) NOT NULL DEFAULT "0" COMMENT "排序",
+	`status` tinyint(1) NOT NULL DEFAULT "1" COMMENT "状态：1出售;2售罄",
+	`display` tinyint(1) NOT NULL DEFAULT "1" COMMENT "是否显示：0不显示;1显示",
+	`create_time` int(11) NOT NULL COMMENT "创建时间",
+	`update_time` int(11) NULL DEFAULT "0" COMMENT "修改时间"
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 in F:\zhongchuang\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `p...')
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160517_032332_product.php(21): yii\db\Migration->createTable('{{%product}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160517_032332_product->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160517_032332_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1101
+    [2] => BLOB/TEXT column 'content' can't have a default value
+)
+
+2016-05-17 03:39:00 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files (x86)\\Common Files'
+    'COMPUTERNAME' => 'KQTL59P5MYDQZI0'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'KQTL59P5MYDQZI0'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\KQTL59P5MYDQZI0'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW64'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\TortoiseSVN\\bin;D:\\Wamp\\wamp\\www\\yii\\framework;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\OpenVPN\\bin;G:\\phpStudy2016\\php70n;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;G:\\phpStudy2016\\MySQL\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\ProgramData\\ComposerSetup\\bin;D:\\;D:\\SSH;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => '������ OneNote 2010'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMFILES' => 'C:\\Program Files (x86)'
+    'PS1' => '\\[\\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'F:/zhongchuang'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:/Program Files/Git/usr/bin/bash'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'KQTL59P5MYDQZI0'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\windows'
+    '_' => 'G:/phpStudy2016/php70n/php'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1463456340.2417
+    'REQUEST_TIME' => 1463456340
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-05-17 03:42:51 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1101 BLOB/TEXT column 'content' can't have a default value in F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160517_032332_product.php(22): yii\db\Migration->createTable('{{%product}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160517_032332_product->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160517_032332_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1101 BLOB/TEXT column 'content' can't have a default value
+The SQL being executed was: CREATE TABLE `product` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT "产品id",
+	PRIMARY KEY (`id`),
+	`name` varchar(32) NOT NULL  COMMENT "产品名称",
+	`content` text NOT NULL DEFAULT "" COMMENT "产品内容",
+	`remark` text NULL COMMENT "备注",
+	`img` varchar(255) NOT NULL DEFAULT "" COMMENT "图片",
+	`de_img` varchar(255) NOT NULL DEFAULT "" COMMENT "详情图片",
+	`sort` int(11) NOT NULL DEFAULT "0" COMMENT "排序",
+	`status` tinyint(1) NOT NULL DEFAULT "1" COMMENT "状态：1出售;2售罄",
+	`display` tinyint(1) NOT NULL DEFAULT "1" COMMENT "是否显示：0不显示;1显示",
+	`create_time` int(11) NOT NULL COMMENT "创建时间",
+	`update_time` int(11) NULL DEFAULT "0" COMMENT "修改时间"
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 in F:\zhongchuang\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `p...')
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160517_032332_product.php(22): yii\db\Migration->createTable('{{%product}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160517_032332_product->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160517_032332_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1101
+    [2] => BLOB/TEXT column 'content' can't have a default value
+)
+
+2016-05-17 03:42:49 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files (x86)\\Common Files'
+    'COMPUTERNAME' => 'KQTL59P5MYDQZI0'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'KQTL59P5MYDQZI0'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\KQTL59P5MYDQZI0'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW64'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\TortoiseSVN\\bin;D:\\Wamp\\wamp\\www\\yii\\framework;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\OpenVPN\\bin;G:\\phpStudy2016\\php70n;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;G:\\phpStudy2016\\MySQL\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\ProgramData\\ComposerSetup\\bin;D:\\;D:\\SSH;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => '������ OneNote 2010'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMFILES' => 'C:\\Program Files (x86)'
+    'PS1' => '\\[\\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'F:/zhongchuang'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:/Program Files/Git/usr/bin/bash'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'KQTL59P5MYDQZI0'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\windows'
+    '_' => 'G:/phpStudy2016/php70n/php'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1463456569.9078
+    'REQUEST_TIME' => 1463456569
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-05-17 03:43:11 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'product' already exists in F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160517_032332_product.php(22): yii\db\Migration->createTable('{{%product}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160517_032332_product->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160517_032332_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'product' already exists
+The SQL being executed was: CREATE TABLE `product` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT "产品id",
+	PRIMARY KEY (`id`),
+	`name` varchar(32) NOT NULL  COMMENT "产品名称",
+	`content` text NOT NULL  COMMENT "产品内容",
+	`remark` text NULL COMMENT "备注",
+	`img` varchar(255) NOT NULL DEFAULT "" COMMENT "图片",
+	`de_img` varchar(255) NOT NULL DEFAULT "" COMMENT "详情图片",
+	`sort` int(11) NOT NULL DEFAULT "0" COMMENT "排序",
+	`status` tinyint(1) NOT NULL DEFAULT "1" COMMENT "状态：1出售;2售罄",
+	`display` tinyint(1) NOT NULL DEFAULT "1" COMMENT "是否显示：0不显示;1显示",
+	`create_time` int(11) NOT NULL COMMENT "创建时间",
+	`update_time` int(11) NULL DEFAULT "0" COMMENT "修改时间"
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 in F:\zhongchuang\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 F:\zhongchuang\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `p...')
+#1 F:\zhongchuang\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\zhongchuang\console\migrations\m160517_032332_product.php(22): yii\db\Migration->createTable('{{%product}}', Array, 'ENGINE=InnoDB D...')
+#3 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m160517_032332_product->up()
+#4 F:\zhongchuang\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m160517_032332_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\zhongchuang\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\zhongchuang\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\zhongchuang\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\zhongchuang\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(176): yii\base\Module->runAction('migrate', Array)
+#11 F:\zhongchuang\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 F:\zhongchuang\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\zhongchuang\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'product' already exists
+)
+
+2016-05-17 03:43:10 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files (x86)\\Common Files'
+    'COMPUTERNAME' => 'KQTL59P5MYDQZI0'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\Administrator'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'HOSTNAME' => 'KQTL59P5MYDQZI0'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\KQTL59P5MYDQZI0'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW64'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\Administrator\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\TortoiseSVN\\bin;D:\\Wamp\\wamp\\www\\yii\\framework;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\OpenVPN\\bin;G:\\phpStudy2016\\php70n;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin;G:\\phpStudy2016\\MySQL\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\ProgramData\\ComposerSetup\\bin;D:\\;D:\\SSH;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => '������ OneNote 2010'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMFILES' => 'C:\\Program Files (x86)'
+    'PS1' => '\\[\\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'F:/zhongchuang'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:/Program Files/Git/usr/bin/bash'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'KQTL59P5MYDQZI0'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'WINDIR' => 'C:\\windows'
+    '_' => 'G:/phpStudy2016/php70n/php'
+    'asl_log' => 'Destination=file'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1463456590.186
+    'REQUEST_TIME' => 1463456590
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-07-14 08:03:13 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'menu' already exists' in F:\sellcms\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 F:\sellcms\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 F:\sellcms\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\sellcms\vendor\mdmsoft\yii2-admin\migrations\m140602_111327_create_menu_table.php(33): yii\db\Migration->createTable('{{%menu}}', Array, 'CHARACTER SET u...')
+#3 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m140602_111327_create_menu_table->up()
+#4 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m140602_111327_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\sellcms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\sellcms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\sellcms\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\sellcms\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 F:\sellcms\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\sellcms\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'menu' already exists
+The SQL being executed was: CREATE TABLE `menu` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(128) NOT NULL,
+	`parent` int(11),
+	`route` varchar(255),
+	`order` int(11),
+	`data` blob,
+	FOREIGN KEY (`parent`) REFERENCES `menu`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+) CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB' in F:\sellcms\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 F:\sellcms\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `m...')
+#1 F:\sellcms\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 F:\sellcms\vendor\mdmsoft\yii2-admin\migrations\m140602_111327_create_menu_table.php(33): yii\db\Migration->createTable('{{%menu}}', Array, 'CHARACTER SET u...')
+#3 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m140602_111327_create_menu_table->up()
+#4 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m140602_111327_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 F:\sellcms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\sellcms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\sellcms\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 F:\sellcms\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 F:\sellcms\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 F:\sellcms\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'menu' already exists
+)
+
+2016-07-14 08:03:10 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss5016' => '48872256'
+    'ACLOCAL_PATH' => '/mingw32/share/aclocal:/usr/share/aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\wangsf\\AppData\\Roaming'
+    'CLASSPATH' => '.;D:\\java\\jdk1.7\\lib;D:\\java\\jdk1.7\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'ZJ-KF-002'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DEVMGR_SHOW_DETAILS' => '1'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'D:\\Git\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\wangsf'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\wangsf'
+    'HOSTNAME' => 'ZJ-KF-002'
+    'INFOPATH' => '/usr/local/info:/usr/share/info:/usr/info:/share/info:'
+    'JAVA_HOME' => 'D:\\java\\jdk1.7'
+    'JBOSS_HOME' => 'D:\\jboss-as-7.1.0.Final'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\wangsf\\AppData\\Local'
+    'LOGONSERVER' => '\\\\ADSERVER'
+    'MANPATH' => '/mingw32/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man:'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\wangsf\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\local\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\bin;C:\\Users\\wangsf\\bin;D:\\java\\jdk1.7\\bin;D:\\java\\jdk1.7\\jre\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (x86)\\Windows7Master;D:\\MySQL\\bin;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86\\ext;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy\\phpStudy\\php56n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\wangsf\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Git\\Git\\usr\\bin\\vendor_perl;D:\\Git\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => '/mingw32/lib/pkgconfig:/mingw32/share/pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => '/f/sellcms'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'D:\\Git\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => '/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'USERDNSDOMAIN' => 'ANCDA.CN'
+    'USERDOMAIN' => 'ANCDA'
+    'USERNAME' => 'wangsf'
+    'USERPROFILE' => 'C:\\Users\\wangsf'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_' => '/usr/bin/winpty'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1468483390.5785
+    'REQUEST_TIME' => 1468483390
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@mdm/admin/migrations'
+    ]
+    'argc' => 3
+]
+2016-07-14 08:04:32 [-][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'You should configure "authManager" component to use database before executing this migration.' in F:\sellcms\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php:27
+Stack trace:
+#0 F:\sellcms\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php(45): m140506_102106_rbac_init->getAuthManager()
+#1 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m140506_102106_rbac_init->up()
+#2 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m140506_102106_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 F:\sellcms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 F:\sellcms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 F:\sellcms\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#7 F:\sellcms\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#8 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 F:\sellcms\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 F:\sellcms\yii(27): yii\base\Application->run()
+#12 {main}
+2016-07-14 08:04:29 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss5016' => '48872256'
+    'ACLOCAL_PATH' => '/mingw32/share/aclocal:/usr/share/aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\wangsf\\AppData\\Roaming'
+    'CLASSPATH' => '.;D:\\java\\jdk1.7\\lib;D:\\java\\jdk1.7\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'ZJ-KF-002'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DEVMGR_SHOW_DETAILS' => '1'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'D:\\Git\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\wangsf'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\wangsf'
+    'HOSTNAME' => 'ZJ-KF-002'
+    'INFOPATH' => '/usr/local/info:/usr/share/info:/usr/info:/share/info:'
+    'JAVA_HOME' => 'D:\\java\\jdk1.7'
+    'JBOSS_HOME' => 'D:\\jboss-as-7.1.0.Final'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\wangsf\\AppData\\Local'
+    'LOGONSERVER' => '\\\\ADSERVER'
+    'MANPATH' => '/mingw32/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man:'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\wangsf\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\local\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\bin;C:\\Users\\wangsf\\bin;D:\\java\\jdk1.7\\bin;D:\\java\\jdk1.7\\jre\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (x86)\\Windows7Master;D:\\MySQL\\bin;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86\\ext;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy\\phpStudy\\php56n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\wangsf\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Git\\Git\\usr\\bin\\vendor_perl;D:\\Git\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => '/mingw32/lib/pkgconfig:/mingw32/share/pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => '/f/sellcms'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'D:\\Git\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => '/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'USERDNSDOMAIN' => 'ANCDA.CN'
+    'USERDOMAIN' => 'ANCDA'
+    'USERNAME' => 'wangsf'
+    'USERPROFILE' => 'C:\\Users\\wangsf'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_' => '/usr/bin/winpty'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1468483469.662
+    'REQUEST_TIME' => 1468483469
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
+2016-07-14 08:06:04 [-][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'You should configure "authManager" component to use database before executing this migration.' in F:\sellcms\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php:27
+Stack trace:
+#0 F:\sellcms\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php(45): m140506_102106_rbac_init->getAuthManager()
+#1 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m140506_102106_rbac_init->up()
+#2 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m140506_102106_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 F:\sellcms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 F:\sellcms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 F:\sellcms\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#7 F:\sellcms\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#8 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 F:\sellcms\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 F:\sellcms\yii(27): yii\base\Application->run()
+#12 {main}
+2016-07-14 08:06:03 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss5016' => '48872256'
+    'ACLOCAL_PATH' => '/mingw32/share/aclocal:/usr/share/aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\wangsf\\AppData\\Roaming'
+    'CLASSPATH' => '.;D:\\java\\jdk1.7\\lib;D:\\java\\jdk1.7\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'ZJ-KF-002'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DEVMGR_SHOW_DETAILS' => '1'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'D:\\Git\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\wangsf'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\wangsf'
+    'HOSTNAME' => 'ZJ-KF-002'
+    'INFOPATH' => '/usr/local/info:/usr/share/info:/usr/info:/share/info:'
+    'JAVA_HOME' => 'D:\\java\\jdk1.7'
+    'JBOSS_HOME' => 'D:\\jboss-as-7.1.0.Final'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\wangsf\\AppData\\Local'
+    'LOGONSERVER' => '\\\\ADSERVER'
+    'MANPATH' => '/mingw32/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man:'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\wangsf\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\local\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\bin;C:\\Users\\wangsf\\bin;D:\\java\\jdk1.7\\bin;D:\\java\\jdk1.7\\jre\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (x86)\\Windows7Master;D:\\MySQL\\bin;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86\\ext;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy\\phpStudy\\php56n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\wangsf\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Git\\Git\\usr\\bin\\vendor_perl;D:\\Git\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => '/mingw32/lib/pkgconfig:/mingw32/share/pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => '/f/sellcms'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'D:\\Git\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => '/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'USERDNSDOMAIN' => 'ANCDA.CN'
+    'USERDOMAIN' => 'ANCDA'
+    'USERNAME' => 'wangsf'
+    'USERPROFILE' => 'C:\\Users\\wangsf'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_' => '/usr/bin/winpty'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1468483563.0043
+    'REQUEST_TIME' => 1468483563
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
+2016-07-14 08:09:02 [-][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'You should configure "authManager" component to use database before executing this migration.' in F:\sellcms\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php:27
+Stack trace:
+#0 F:\sellcms\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php(45): m140506_102106_rbac_init->getAuthManager()
+#1 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(509): m140506_102106_rbac_init->up()
+#2 F:\sellcms\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(130): yii\console\controllers\BaseMigrateController->migrateUp('m140506_102106_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 F:\sellcms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 F:\sellcms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 F:\sellcms\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#7 F:\sellcms\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#8 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 F:\sellcms\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 F:\sellcms\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 F:\sellcms\yii(27): yii\base\Application->run()
+#12 {main}
+2016-07-14 08:09:01 [-][-][-][info][application] $_SERVER = [
+    '#envTSLOGsss5016' => '48872256'
+    'ACLOCAL_PATH' => '/mingw32/share/aclocal:/usr/share/aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\wangsf\\AppData\\Roaming'
+    'CLASSPATH' => '.;D:\\java\\jdk1.7\\lib;D:\\java\\jdk1.7\\lib\\tools.jar'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'ZJ-KF-002'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DEVMGR_SHOW_DETAILS' => '1'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'D:\\Git\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'C:\\Users\\wangsf'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\wangsf'
+    'HOSTNAME' => 'ZJ-KF-002'
+    'INFOPATH' => '/usr/local/info:/usr/share/info:/usr/info:/share/info:'
+    'JAVA_HOME' => 'D:\\java\\jdk1.7'
+    'JBOSS_HOME' => 'D:\\jboss-as-7.1.0.Final'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\wangsf\\AppData\\Local'
+    'LOGONSERVER' => '\\\\ADSERVER'
+    'MANPATH' => '/mingw32/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man:'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\wangsf\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\local\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\usr\\bin;D:\\Git\\Git\\mingw32\\bin;D:\\Git\\Git\\usr\\bin;C:\\Users\\wangsf\\bin;D:\\java\\jdk1.7\\bin;D:\\java\\jdk1.7\\jre\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (x86)\\Windows7Master;D:\\MySQL\\bin;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86;D:\\Visual-NMP-x64\\bin\\php\\php-5.3.29-nts-Win32-VC9-x86\\ext;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy\\phpStudy\\php56n;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\wangsf\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Git\\Git\\usr\\bin\\vendor_perl;D:\\Git\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => '/mingw32/lib/pkgconfig:/mingw32/share/pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => '/f/sellcms'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'D:\\Git\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => '/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\wangsf\\AppData\\Local\\Temp'
+    'USERDNSDOMAIN' => 'ANCDA.CN'
+    'USERDOMAIN' => 'ANCDA'
+    'USERNAME' => 'wangsf'
+    'USERPROFILE' => 'C:\\Users\\wangsf'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_' => '/usr/bin/winpty'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1468483741.0315
+    'REQUEST_TIME' => 1468483741
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]

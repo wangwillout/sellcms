@@ -1,0 +1,373 @@
+@CHARSET "UTF-8";
+.nav_div a {
+            	text-align:center;
+            }
+            .content_ul {
+            	text-align:center;
+            	width:100%;
+            	height:100%;
+            }
+            #wraper {
+            	width:100%;
+            	height:100%;
+            }
+            .lrfont {
+            	font-size:12px;
+            }
+            .headers {
+            	font-size:20px;
+            }
+            .headers img {
+            	width:200px;
+            }
+            img {
+            	max-width:400px;
+            }
+/*             背景 */
+			.back1 {
+				background:url(/child/assets/HTML5/images/back1.png);
+				
+				
+			}
+			.back2 {
+				background:url(/child/assets/HTML5/images/back2.png);
+				
+			}
+			.back3 {
+				background:url(/child/assets/HTML5/images/back3.png);
+				
+			}
+			.back4 {
+				background:url(/child/assets/HTML5/images/back4.png);
+				
+			}
+			.back5 {
+				background:url(/child/assets/HTML5/images/back5.png);
+				
+			}
+			.back6 {
+				background:url(/child/assets/HTML5/images/back6.png);
+				
+			}
+			.back7 {
+				background:url(/child/assets/HTML5/images/back7.png);
+				
+			}
+			.back8 {
+				background:url(/child/assets/HTML5/images/back8.png);
+				
+			}
+            .new_ul {
+				background:url(/child/assets/HTML5/images/back6_1.png);
+			}
+/* 			底色 */
+			.ground2 {
+				background:url(/child/assets/HTML5/images/ground1.png) no-repeat;
+				background-size:100%;
+			}
+            .ground3 {
+				background:url(/child/assets/HTML5/images/ground3.png) no-repeat;
+				background-size:100%;
+			}
+            .ground4 {
+				background:url(/child/assets/HTML5/images/ground2.png) no-repeat;
+				background-size:100%;
+			}
+            .ground5 {
+				background:url(/child/assets/HTML5/images/ground4.png) no-repeat;
+				background-size:100%;
+			}
+/* 			首页 */
+			.home0 {
+				position:relative;
+				height:auto;
+				width:100%;
+				background:url(/child/assets/HTML5/images/home1.png) no-repeat 50% 50%;
+				background-size:100%;
+			}
+			.home1 {
+				font-size:32px;
+				color:rgba(236,126,100,1);
+			}
+			.home2, .home3,.home4 {
+				font-size:16px;
+				color:rgba(78,173,224,1);
+			}
+			.home5 {
+				position:relative;
+				height:auto;
+				background:url(/child/assets/HTML5/images/home2.png) no-repeat 50% 50%;
+				background-size:100%;
+				font-size:12px;
+			}
+			.home5 span {
+				display:inline-block;
+				position:absolute;
+				bottom:200px;
+			}
+            /*简介*/
+            .descript {
+            	color:rgba(255,255,255,1);
+            	max-width:800px;
+            	margin-left:auto;
+            	margin-right:auto;
+            	background:url(/child/assets/HTML5/images/words.png) no-repeat 50% 0%;
+            	background-size:100%;
+            	padding: 100px 15% 0 15%;
+            }
+            @media screen and (max-width:500px) {
+				.descript{
+					padding: 55px 8% 0 8%;
+                }
+			}
+            /*轮播1*/
+			.lunbo1 {
+				width: 100%;
+				max-width:600px;
+				height:auto;
+				margin-left:auto;
+				margin-right:auto;
+				position: relative;
+				overflow: hidden;
+				
+			}
+			
+			.lunbo1_ul1 {
+				position: absolute;
+				width: 800%;
+				height: auto;
+			}
+			
+			.lunbo1_ul1>li {
+				display: inline-block;
+				float: left;
+				z-index: 5;
+				width: 12.5%;
+				height: auto;
+			}
+			
+			.lunbo1_ul1>li img {
+				width: 100%;
+				max-width:600px;
+				height: auto;
+			}
+			
+			.lunbo1_ul2 {
+				position: absolute;
+				width: 72px;
+				height: 14px;
+				background: rgba(255, 255, 255, 0.3);
+				z-index: 10;
+				bottom: 0px;
+				right: 20px;
+				border-radius: 5px;
+			}
+			
+			.lunbo1_ul2>li {
+				width: 10px;
+				height: 10px;
+				background: rgba(183, 183, 183, 1);
+				border-radius: 10px;
+				position: relative;
+				float: left;
+				margin: 2px 1px;
+				z-index: 10;
+			}
+/* 			招生 */
+			
+			#enrol_ul li {
+				padding:0px;
+				margin:0px;
+			}
+			#enrol_ul .enrol_li {
+				padding:5px 0;
+			}
+            #enrol_ul #enrol_li1 {
+				margin-top:20px;
+			}
+			.enrol_li {
+				height:45px;
+			}
+			.enrol_sp {
+				text-align:left;
+				display:inline-block;
+				width:80%;
+				padding-left:15px;
+				margin-left:auto;
+				margin-right:auto;
+				height:32px;
+				font-size:20px;
+				color:rgba(255,255,255,1);
+				background:url(/child/assets/HTML5/images/enrol2.png) no-repeat;
+				background-size:125px;
+			}
+            
+            .enrol_spc {
+            	text-align:left;
+				display:inline-block;
+				width:80%;
+				margin-left:auto;
+				margin-right:auto;
+				height:40px;
+				font-size:16px;
+				color:rgba(133,218,188,1);
+			}
+            @media screen and (min-width:800px) {
+				.enrol_sp, .enrol_spc {
+					width:50%;
+                }
+			}
+/* 			学生 */
+			.student_li {
+				padding:5px 0;
+			}
+			.student_li img{
+				width:90%;
+				max-width:380px;
+			}
+/* 			教师 */
+			.teacher_ul {
+				position:absolute;
+				display:none;
+				width:90%;
+				left:5%;
+				top:50px;
+				z-index:100;
+				height:500px;
+				background:url(/child/assets/HTML5/images/words.png) no-repeat 50% 0%;
+				background-size:100%;
+			}
+			.teacher_content {
+				display:inline-block;
+				width:70%;
+				max-width:500px;
+				color:rgba(255,255,255,1);
+			}
+			.teacher_name{
+				display:inline-block;
+				margin-top:0;
+				padding-left:24px;
+				font-size:20px;
+				line-height:48px;
+				color:rgba(0,0,0,0);
+			}
+			@media screen and (min-width:330px) {
+				.teacher_name{
+					margin-top:20px;
+                }
+			}
+			@media screen and (min-width:420px) {
+				.teacher_name{
+					margin-top:30px;
+                }
+			}
+			.teacher_del, .new_del {
+				display:inline-block;
+				width:48px;
+				height:48px;
+				float:right;
+				margin-right:10px;
+ 				background:url(/child/assets/HTML5/images/delete.png);
+			}
+			@media screen and (min-width:600px) {
+				.teacher_del, .new_del{
+					margin-right:10%;
+                }
+			}
+			@media screen and (min-width:1200px) {
+				.teacher_del, .new_del{
+					margin-right:30%;
+                }
+			}
+/* 			新闻 */
+            .new_ul {
+            	position:absolute;
+            	display:none;
+            	width:100%;
+            	top:45px;
+            	z-index:100;
+            }
+            .new_li {
+            	margin:0px;
+            	padding:5px 0;
+            }
+			.newimg {
+				width:30%;
+				max-width:200px;
+			}
+			.newcontent {
+				background:url(/child/assets/HTML5/images/ground1.png) no-repeat;
+				background-size:100%;
+			}
+			.newcontent img{
+				width:40%;
+				max-width:350px;
+				max-height:250px;
+			}
+
+        
+/* 			家长 */
+			.partent {
+				background:url(/child/assets/HTML5/images/partent1.png) no-repeat 50% 0%;
+				background-size:100%;
+				padding:100px 0;
+				color:rgba(255,255,255,1);
+			}
+            
+/* 			预约 */
+			#submit {
+	            display:inline-block;
+				width:50%;
+				max-width:200px;
+				height:40px;
+				background:url(/child/assets/HTML5/images/book2.png) no-repeat 50% 0%;
+				background-size:200px;
+				
+			}
+			.book_ul {
+				margin-top:100px;
+			}
+			.book_input input{
+				width:75%;
+				max-width:800px;
+				height:40px;
+				text-align:center;
+				background:url(/child/assets/HTML5/images/book4.png) repeat;
+				border:2px solid rgba(15,225,85,1);
+			}
+			.book_text_ul, .book_text_ul1, .book_text_ul2{
+				position:absolute;
+				height:100%;
+				width:100%;
+				top:0px;
+				padding-top:200px;
+				background:rgba(60,60,60,0.5);
+				display:none;
+			}
+			.book_text_ul li, .book_text_ul1 li, .book_text_ul2 li {
+				background:rgba(255,255,255,1);
+			}
+			.book_text_ul a, .book_text_ul1 a, .book_text_ul2 a {
+				font-size:16px;
+				font-weight:900;
+				color:rgba(62,170,242,1);
+			}
+			.book_text_ul a:hover {
+				color:rgba(62,77,242,1);
+			}
+			.book_text_ul1 a:hover {
+				color:rgba(62,77,242,1);
+			}
+			.book_text_ul2 a:hover {
+				color:rgba(62,77,242,1);
+			}
+            @media screen and (min-width:500px) {
+				.home0, .home5, .descript, .teacher_ul, .partent{
+					background-size:600px;
+                }
+			}
+            @media screen and (max-width:800px) {
+				.back1, .back2, .back3, .back4, .back5, .back6, .back7, .back8, .new_ul {
+					background-size:200%;
+                }
+			}
